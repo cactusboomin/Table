@@ -1,0 +1,31 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <table>
+        <tr>
+            <td>Select</td>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Registration Date</td>
+            <td>Activity Date</td>
+            <td>Status</td>
+        </tr>
+
+        @foreach (var u in Model.Users)
+        {
+            <tr>
+                <td></td>
+                <td>@u.Id</td>
+                <td>@u.UserName</td>
+                <td>@u.Email</td>
+                <td>@u.RegistrationDate</td>
+                <td>@u.LastActivity</td>
+                <td>@u.Status</td>
+            </tr>
+        }
+    </table>
+</div>
